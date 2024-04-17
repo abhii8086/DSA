@@ -1,5 +1,12 @@
+import java.util.Scanner;
 class binarytree{
 
+public Node root = null;
+
+static Node createNode(){
+   Scanner sc = new Scanner(System.in);
+
+}
 public static void main(String [] args){
 
 
