@@ -26,7 +26,10 @@ public class Trees {
 		Node root = create();
 	}
 
-}
+public void in_order(){}
+public void pre_order(){}
+public void post_order(){}
+
 
 class Node {
 	int data;
