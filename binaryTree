@@ -26,9 +26,15 @@ public class Trees {
 		Node root = create();
 	}
 
-public void in_order(){}
+// BFS
 public void pre_order(){}
-public void post_order(){}
+ //root,left,right 
+public void in_order(){
+ //left,root,right 
+}
+public void post_order(){
+  //left,right,root 
+}
 
 
 class Node {
