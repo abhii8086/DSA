@@ -1,0 +1,27 @@
+package collections_Frameworks;
+
+import java.util.Stack;
+
+public class stack {
+
+	public static void main(String[] args) {
+		Stack<String> books = new Stack<>();
+
+		books.push("arjun ki katha");
+		books.push("maharana the yodhha");
+		books.push("Ashok Chakravarti");
+		books.push("The Ramayan");
+		books.push("The epic Mahabharat");
+		books.push("Lav Kush story");
+		books.push("MahaKal");
+
+		System.out.println(books.capacity());
+		System.out.println(books.empty());
+
+		System.out.println(books);
+		books.peek();
+		books.pop();
+
+	}
+
+}
