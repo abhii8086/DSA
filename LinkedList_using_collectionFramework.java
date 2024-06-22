@@ -1,5 +1,5 @@
 import java.util.LinkedList;
-//
+///
 public class linkedList_using_collectionFramework {
 
 	public static void main(String[] args) {
