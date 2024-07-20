@@ -17,3 +17,16 @@ class Sum {
 2.find rel btween prob and sub-problem
 3.generalise it into functional format
 */
+// finding pow of two no a,b
+class Pow {
+    public static void main(String[] args) {
+        
+        System.out.println("Pow No Sum is:"+Pow(2,3));
+    }
+    
+    public static int Pow(int a ,int b){
+        if(b==0)
+            return 1;
+        return a*Pow(a,b-1);
+    }
+}
