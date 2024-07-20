@@ -1,0 +1,19 @@
+//find the n natural no sum using reacursion.
+class Sum {
+    public static void main(String[] args) {
+        
+        System.out.println("Natural No Sum is:"+NaturalSum(5));
+    }
+    
+    public static int NaturalSum(int n){
+        if(n==1)
+            return 1;
+        return n+NaturalSum(n-1);
+    }
+}
+
+/* Recursion flow:
+1.find base case
+2.find rel btween prob and sub-problem
+3.generalise it into functional format
+*/
