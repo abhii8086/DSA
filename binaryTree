@@ -32,7 +32,7 @@ public class twoPointer {
 	static Node createTree() {
 		Node root = null;
 		int data;
-		System.out.println("Enter Data: "); // root data
+		System.out.println("Enter Data: "); // root data .
 		data = sc.nextInt();
 		if (data == -1)
 			return null;
