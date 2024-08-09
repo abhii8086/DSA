@@ -52,3 +52,21 @@ class STACK {
         
     }
 }
+
+// STACK USING ARRAYLIST
+import java.util.ArrayList;
+class STACK_using_ArrayList{
+    public static void main(String[] args) {
+        ArrayList<Integer> s1 = new ArrayList<>();
+        s1.add(1); // push
+        s1.add(2);
+        s1.add(3);
+        
+        s1.remove(2); // pop by index
+        System.out.println(s1.get(1) );// peek by index
+        
+        
+        for(int x:s1)
+            System.out.println(x);
+    }
+}
