@@ -72,3 +72,62 @@ class STACK_using_ArrayList{
 }
 
 //stack using LinkedList
+class stack_using_likedList {
+    private static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data = data;
+            this.next = null;
+        }
+    }
+    static class STACK{
+      static Node head = null;
+      
+      public static boolean isEmpty(){
+          return(head==null);
+      }
+      static void push(int data){
+        Node newNode = new Node(data);
+          if(isEmpty()){
+              head = newNode;
+          }else{
+              newNode.next = head;
+              head = newNode;
+          }
+      }
+      public static void pop(){
+          if(isEmpty()){
+              System.out.println("stack is Empty()");
+          }else{
+              Node currElement = head;
+              System.out.println(currElement.data+" is poped");
+              head = head.next;
+          }
+      }
+      
+      public static void peek(){
+          if(isEmpty()){
+              System.out.println("stack is Empty()");
+          }else{
+              Node currElement = head;
+              System.out.println(currElement.data+" is poped");
+          }
+      }
+    }
+    public static void main(String[] args) {
+        STACK s1 = new STACK();
+        s1.push(1);
+        s1.push(2);
+        s1.push(3);
+        
+        s1.pop();
+        s1.pop();
+        s1.pop();
+        s1.pop();
+        s1.peek();
+        
+        System.out.println("Try programiz.pro");
+        
+    }
+}
