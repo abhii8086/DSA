@@ -70,3 +70,5 @@ class STACK_using_ArrayList{
             System.out.println(x);
     }
 }
+
+//stack using LinkedList
