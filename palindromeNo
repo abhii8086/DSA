@@ -1,0 +1,14 @@
+class Solution {
+    public boolean isPalindrome(int n) {
+        // 1331 = 1331 left order = right order
+        int dup = n;
+        int rev = 0;
+        while(n>0){
+            int ld = n %10;
+             n = n/10;
+            rev = rev *10 +ld;
+        }
+        if(rev==dup)return true;
+        else return false;
+    }
+}
