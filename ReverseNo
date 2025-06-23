@@ -1,0 +1,11 @@
+class Solution {
+    public int reverseNumber(int n) { // 456
+        int rev =0;
+        while(n>0){
+            int ld = n%10; // to extract last digit
+            n = n/10; // to eleminate last digit
+            rev = rev*10 + ld ; // rev*10 to go closest of its tens 60+5
+        }
+        return rev;
+    }
+}
