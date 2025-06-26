@@ -1,0 +1,26 @@
+package basicRecursion;
+
+public class arrayReverse {
+
+	public static void main(String[] args) {
+		int arr[] = { 1, 2, 3, 4, 2 };
+		int n = arr.length;
+		reverse(0, arr, n - 1);
+
+		for (int x : arr)
+			System.out.print(x);
+	}
+
+	public static void reverse(int left, int arr[], int right) {
+		if (left >= right)
+			return;
+//		 swap
+		int temp = arr[left];
+		arr[left] = arr[right];
+		arr[right] = temp;
+
+		reverse(left + 1, arr, right - 1);
+
+	}
+
+}
