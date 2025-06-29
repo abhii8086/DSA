@@ -6,9 +6,9 @@ public class selctionSort {
 
 		int a[] = { 2, 1, 3, 7, 4 };
 		int size = a.length;
-		for (int i = 0; i < size - 1; i++) {
+		for (int i = 0; i < size - 2; i++) {
 			int smallest = i;
-			for (int j = i + 1; j < size; j++) {
+			for (int j = i ; j < size-1; j++) {
 				if (a[smallest] > a[j])
 					smallest = j;
 			}
