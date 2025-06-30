@@ -17,6 +17,33 @@ public class insertionSort {
 		for (int x : a) {
 			System.out.print(x + " ");
 		}
+
+
+		//////////////////
+		package sorting;
+
+public class insertionSort {
+
+	public static void main(String[] args) {
+		int arr[] = { 2, 3, 4, 5, 1 };
+		int n = arr.length;
+
+		for (int i = 0; i <= n - 1; i++) {
+			int j = i;
+			while (j > 0 && arr[j - 1] > arr[j]) {
+				int temp = arr[j - 1];
+				arr[j - 1] = arr[j];
+				arr[j] = temp;
+				j--;
+			}
+		}
+		for (int x : arr) {
+			System.out.print(" " + x);
+		}
+
+	}
+}
+
 	}
 
 }
