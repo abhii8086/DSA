@@ -10,3 +10,20 @@ class Main {
         System.out.println("largest element is "+largest);
     }
 }
+// another way
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args) {
+        int arr[] = {2,4,5,9,1,3};
+        int n = arr.length;
+        //int largest = arr[0];
+        // for(int i=1;i<n;i++){
+        //     if(arr[i]>largest)
+        //         largest = arr[i]; // update the largest value;
+        // }
+        
+        Arrays.sort(arr);
+        int largest = arr[n-1];
+        System.out.println("largest element is "+largest);
+    }
+}
