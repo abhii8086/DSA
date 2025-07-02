@@ -5,7 +5,7 @@ public class ArmstrongNo {
 	public static void main(String[] args) {
 
 		int n = 371;
-		int dup = n; // save the copy
+		int dup = n; // save the copy for compair
 		int sum = 0;
 		while (n > 0) {
 			int ld = n % 10;
