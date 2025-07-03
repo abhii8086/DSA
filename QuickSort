@@ -1,0 +1,50 @@
+package sorting;
+
+public class Quick {
+
+	public static void main(String[] args) {
+		int arr[] = { 2, 1, 3, 5, 4 };
+		int n = arr.length;
+		qs(arr, 0, n - 1);
+
+		for (int x : arr)
+			System.out.print(" " + x);
+	}
+
+	public static void qs(int arr[], int low, int high) {
+		if (low < high) {
+			int partiIndex = parti(arr, low, high);
+			qs(arr, low, partiIndex - 1);
+			qs(arr, partiIndex + 1, high);
+		}
+	}
+
+	public static int parti(int arr[], int low, int high) {
+		int pivot = arr[low];
+		int i = low;
+		int j = high;
+
+		while (i < j) {
+			while (arr[i] <= pivot && i <= high - 1) {
+				i++;
+			}
+			while (arr[j] > pivot && j >= low) {
+				j--;
+			}
+
+			if (i < j)
+				swap(arr, i, j);
+		}
+		swap(arr, low, j);
+		return j;
+	}
+
+//   utility function for swap
+
+	public static void swap(int arr[], int i, int j) {
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+	}
+
+}
