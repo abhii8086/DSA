@@ -1,0 +1,19 @@
+package Array;
+
+public class removeDuplicate_usingTwoPointers {
+
+	public static void main(String[] args) {
+		int arr[] = { 1, 1, 2, 2, 2, 3, 3 };
+		int n = arr.length;
+		int i = 0;
+		for (int j = 1; j < n; j++) {
+			if (arr[i] != arr[j]) {
+				arr[i + 1] = arr[j];
+				i++;
+			}
+		}
+		for (int x : arr)
+			System.out.print(" " + x);
+	}
+
+}
