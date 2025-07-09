@@ -19,7 +19,7 @@ public class IntersectionOfTwoSortedArray {
 					visi[j] = 1;
 					break;
 				}
-				if (B[j] > A[j])
+				if (B[j] > A[i])
 					break;
 			}
 		}
