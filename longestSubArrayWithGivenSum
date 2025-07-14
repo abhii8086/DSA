@@ -1,1 +1,20 @@
 
+class Main {
+    public static void main(String[] args) {
+        // brute force try to generate all possible sub array and add it inorder to get the ans
+        int arr[] = {1,2,3,1,1,1,1,4,2,3};
+        int n = arr.length;
+        int k = 3;
+        
+        int len = 0; // for length of the sunArray 
+        for(int i =0;i<n;i++){
+            int sum = 0;
+            for(int j =i;j<n;j++){
+                sum +=arr[i];
+                if(sum == k ) 
+                     len = Math.max(len,j-i+1);
+            }
+        }
+        System.out.println(" "+ len);
+    }
+}
