@@ -14,3 +14,34 @@ class Main {
         }
     }
 }
+
+// optimize approach 
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int[] arr = { 7, 11,2, 15};
+        int n = arr.length;
+        int target = 9;
+        
+        HashMap<Integer,Integer> map = new HashMap<>();
+        
+        int ans[] = new int[2];
+        ans[0] = ans[1] = -1; // initalize kr diya
+        for(int i=0;i<n;i++){
+            int num = arr[i];
+            int sec = target -num;
+            
+            if(map.containsKey(sec)){ // hai to bata de uske index k sath
+                ans[0] = map.get(sec);
+                ans[1] = i;
+            }
+            map.put(arr[i],i); // nhi hai to dal de
+        }
+        
+        for(int x:ans){
+            System.out.println(x);
+        }
+    }
+}
