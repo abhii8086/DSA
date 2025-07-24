@@ -26,3 +26,25 @@ class rearrangeElementbyOddEvenPosition{
         System.out.print(" "+x);
     }
 }
+
+// o(N)  ------ redude to 2N to N 
+// o(N)
+class Solution {
+    public int[] rearrangeArray(int[] nums) {
+        int n = nums.length;
+        int pos = 0;
+        int neg = 1;
+        int list[] = new int[n];
+
+        for(int i=0;i<n;i++){
+            if(nums[i]<0){
+                list[neg] = nums[i];
+                neg +=2;
+            }else{
+                list[pos] = nums[i];
+                pos +=2;
+            }
+        }
+        return list;
+    }
+}
