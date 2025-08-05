@@ -1,0 +1,13 @@
+class Solution {
+    public int reverse(int x) {
+        long rev = 0;        // no need to worry about neg number it works well %,/ this operator for neg numbers
+        while(x!=0){
+            int ld = x%10;
+            x = x/10;
+            rev = rev*10+ld;             
+            }
+    if(rev<Integer.MIN_VALUE || rev>Integer.MAX_VALUE) return 0;  // for handling the edge case
+
+      return (int) rev; // convering long to int to return as he wants
+    }
+}
