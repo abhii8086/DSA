@@ -1,1 +1,31 @@
+// this is brute sol with time complexity of O(n log n) and space complexity O(n)
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+       // merge two array then sort and take mid if even and odd (n+n1)/2  
+       int n1 = nums1.length;
+       int n2 = nums2.length;
 
+        int[] temp = new int[n1 + n2];
+        int k = 0;
+
+        // Merge both arrays into temp
+        for (int i = 0; i < n1; i++) {
+            temp[k++] = nums1[i];
+        }
+        for (int i = 0; i < n2; i++) {
+            temp[k++] = nums2[i];
+        }
+
+        Arrays.sort(temp);  // Sort the merged array
+
+        int n3 = n1 + n2;
+
+        if (n3 % 2 == 0) {
+            // even length - average of middle two
+            return ((temp[n3 / 2] + temp[(n3 - 1) / 2]) / 2.0);
+        } else {
+            // odd length - middle element
+            return (double) temp[n3/2];
+        }
+    }
+}
